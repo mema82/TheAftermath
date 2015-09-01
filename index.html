@@ -15,14 +15,16 @@
     </div>
   </div>
 
-  <section ng-controller="ngTodoCtrl"><!--Add relevent ctrlR -->
+  <section ng-controller="ngTodoCtrl"><!--Add relevent ctrlR, CtrlR only has scope in this section. Find OTHER ways to share if desired -->
     <div class="outer-container">
 
       <div class="add-todo-group input-group input-group-lg">
         <span class="input-group-addon">
           <i class="glyphicon glyphicon-list-alt"></i>
         </span>
-        <input placeholder="New Todo" class="form-control" type="text"><!-- model  -->
+        <input ng-model="newTask" placeholder="New Todo" class="form-control" type="text">
+         <!-- Adding a ng-model with property called newTask. NOw when I refer to 'newTask' in my {{ }} syntax it will know what I am referrign to. 2-Way Binding-->
+         
         <span class="input-group-btn">
           <button class="btn btn-success" type="button"><!-- click  -->
             <i class="glyphicon glyphicon-plus"></i>

@@ -9,7 +9,6 @@ ngTodo.controller('ngTodoCtrl', function ngTodoCtrl($scope){ //$scope is a depen
 		{val: "Amsterdam", completed: true},
 		{val: "Europe", completed: false}
 	];
-
 });
 
 /*If you want info available on the templating side, it neesd to be on the Scope object. You can add JS
