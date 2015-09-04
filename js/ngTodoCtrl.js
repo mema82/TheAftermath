@@ -26,7 +26,10 @@ ngTodo.controller('ngTodoCtrl', function ngTodoCtrl($scope){ //$scope is a depen
 			not competed todos to the list.*/
 			return !element.completed;
 		});
+	};
 
+	$scope.removeTodo = function(index) {
+		$scope.todos.splice(index,1);
 	};
 
 });
