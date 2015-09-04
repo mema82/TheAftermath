@@ -38,7 +38,7 @@
         </span>
         <input ng-model="todo.val" ng-class="{finished: todo.completed}" class="form-control" type="text"><!-- model / class  -->
         <span class="input-group-btn">
-          <button class="btn btn-danger" type="button"><!-- click  -->
+          <button ng-click="todos.splice($index,1)" class="btn btn-danger" type="button"><!-- Added REMOVE function to 'X' click. Better to add this power to not on template but controller maybe. $index is whereever you are in the todo-->
             <i class="glyphicon glyphicon-remove"></i>
           </button>
         </span>
