@@ -26,7 +26,7 @@
          <!-- Adding a ng-model with property called newTask. NOw when I refer to 'newTask' in my {{ }} syntax it will know what I am referrign to. 2-Way Binding-->
     
         <span class="input-group-btn">
-          <button class="btn btn-success" type="button"><!-- click  -->
+          <button class="btn btn-success" ng-click="addNewTask()" type="button"><!--Added ng-click directive, now 'on click' this will run the "addNewTask" Function I created in controller -->
             <i class="glyphicon glyphicon-plus"></i>
           </button>
         </span>
