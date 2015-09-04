@@ -17,6 +17,15 @@ ngTodo.controller('ngTodoCtrl', function ngTodoCtrl($scope){ //$scope is a depen
 		$scope.todos.push({completed: false, val: $scope.newTask });
 		//After adding task in input, clear out the input
 		$scope.newTask = '';
+	};
+
+	$scope.clearCompleted = function() {
+		//run JS filter over the 'todos'
+		$scope.todos = $scope.todos.filter(function(element, index) {
+			/*if todo is completed it will tell the CLEAR COMPLETED to leave ('return) the
+			not competed todos to the list.*/
+			return !element.completed;
+		});
 
 	};
 
