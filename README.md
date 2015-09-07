@@ -1,5 +1,3 @@
-# TheAftermath
-
 # MVC Comparisons with AngularJS, EmberJS, BackboneJS and ReactJS
 
 ### The Goal 
