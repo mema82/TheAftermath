@@ -2,7 +2,7 @@
 var Todos = Todos || {};
 Todos.Todo = Todos.Todo || {};
 
-Todos.Todo.FIXTURES = [
+Todos.Todo.FIXTURES = [ // Look for .FIXTURES when looking for fixture data b.c on fixture adapter
  {
    id: 1,
    val: 'Learn Ember.js',
