@@ -16,41 +16,51 @@
   </div>
 
   <!-- script -->
-  <section>
-    <div class="outer-container">
+  <script type="text/x-handlebars" data-template-name="todos"><!--Tell that connects to Todos part-->
+    <section>
+      <div class="outer-container">
 
-      <div class="add-todo-group input-group input-group-lg">
-        <span class="input-group-addon">
-          <i class="glyphicon glyphicon-list-alt"></i>
-        </span>
-        <input class="form-control" type="text" id="new-todo" placeholder="New Todo"> <!-- input value action -->
+        <div class="add-todo-group input-group input-group-lg">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-list-alt"></i>
+          </span>
+          <input class="form-control" type="text" id="new-todo" placeholder="New Todo"> <!-- input value action -->
+          <span class="input-group-btn">
+            <button class="btn btn-success" type="button"> <!-- action createNewTodo -->
+              <i class="glyphicon glyphicon-plus"></i>
+            </button>
+          </span>
+        </div>
+        <!-- each / repeat-->
+            {{#each itemController="todo"}} //# = scope. This will have irems
+              {{todo-entry val=val completed=completed}}
+
+        {{ /each }} // Telling where to END the each / repeat
+        <!-- /each -->
+
+        <div class="btn-clear-group">
+          <button class="btn btn-primary btn-clear">Clear Completed</button> <!-- action -->
+        </div>
+      </div>
+    </section>
+    </script>
+  <!-- /script Template of Our component-->
+  <script type="text/x-handlebars" id="components/todo-entry">
+  <div class="input-group input-group-lg">
+     <span class="input-group-addon">
+       {{ input type="checkbox" checked=completed }}
+     </span>
+
+      {{input value=val classNameBindings=":form-control completed:finished" value=val}}
+      <!-- <input {{bind-attr value="val" class=":form-control completed:finished"}} type="text"> -->
         <span class="input-group-btn">
-          <button class="btn btn-success" type="button"> <!-- action createNewTodo -->
-            <i class="glyphicon glyphicon-plus"></i>
-          </button>
-        </span>
-      </div>
-      <!-- each -->
-      <div class="input-group input-group-lg">
-        <span class="input-group-addon">
-          <input type="checkbox">
-        </span>
+        <button class="btn btn-danger" type="button"> <!-- action -->
+           <i class="glyphicon glyphicon-remove"></i>
+        </button>
+     </span>
+  </div>
 
-        <input class="form-control"> <!-- value classNameBindings -->
-        <span class="input-group-btn">
-          <button class="btn btn-danger" type="button"> <!-- action -->
-            <i class="glyphicon glyphicon-remove"></i>
-          </button>
-        </span>
-      </div>
-      <!-- /each -->
-
-      <div class="btn-clear-group">
-        <button class="btn btn-primary btn-clear">Clear Completed</button> <!-- action -->
-      </div>
-    </div>
-  </section>
-  <!-- /script -->
+  </script>
 
   <!-- JS Assets -->
   <script src="js/jquery-2.0.2.js"></script>
