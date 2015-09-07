@@ -38,8 +38,10 @@
         </span>
         <input ng-model="todo.val" ng-class="{finished: todo.completed}" class="form-control" type="text"><!-- model / class  -->
         <span class="input-group-btn">
-          <button ng-click="removeTodo($index)" class="btn btn-danger" type="button"><!-- Added REMOVE function to 'X' click. Better to add this power to not on template but controller maybe. $index is whereever you are in the todo-->
-            <i class="glyphicon glyphicon-remove"></i>
+          <!-- Added REMOVE function to 'X' click. Better to add this power to not on template but controller maybe. $index is whereever you are in the todo-->
+          <button ng-click="removeTodo($index)" class="btn btn-danger" type="button">
+            <!--Added my Directive to the 'X' removal btn-->
+            <i complete-color="todo.completed" class="glyphicon glyphicon-remove"></i>
           </button>
         </span>
       </div>
