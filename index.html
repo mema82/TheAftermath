@@ -24,6 +24,8 @@
         </span>
         <input ng-model="newTask" placeholder="New Todo" class="form-control" type="text">
          <!-- Adding a ng-model with property called newTask. NOw when I refer to 'newTask' in my {{ }} syntax it will know what I am referrign to. 2-Way Binding-->
+
+         {{newTask | altCaps}} <!--Showing a quicl preview of filter applied although undefined-->
     
         <span class="input-group-btn">
           <button class="btn btn-success" ng-click="addNewTask()" type="button"><!--Added ng-click directive, now 'on click' this will run the "addNewTask" Function I created in controller -->
@@ -38,8 +40,10 @@
         </span>
         <input ng-model="todo.val" ng-class="{finished: todo.completed}" class="form-control" type="text"><!-- model / class  -->
         <span class="input-group-btn">
-          <button ng-click="removeTodo($index)" class="btn btn-danger" type="button"><!-- Added REMOVE function to 'X' click. Better to add this power to not on template but controller maybe. $index is whereever you are in the todo-->
-            <i class="glyphicon glyphicon-remove"></i>
+          <!-- Added REMOVE function to 'X' click. Better to add this power to not on template but controller maybe. $index is whereever you are in the todo-->
+          <button ng-click="removeTodo($index)" class="btn btn-danger" type="button">
+            <!--Added my Directive to the 'X' removal btn-->
+            <i complete-color="todo.completed" class="glyphicon glyphicon-remove"></i>
           </button>
         </span>
       </div>

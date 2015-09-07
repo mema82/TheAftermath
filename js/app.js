@@ -1,4 +1,4 @@
-var ngTodo = angular.module('ngTodo', ['simpleDirecives'])
+var ngTodo = angular.module('ngTodo', ['SimpleDirectives' , 'SimpleFilters'])
 .config(function(){
 
 });
