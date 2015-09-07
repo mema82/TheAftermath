@@ -2,63 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FEM_AngTodo</title>
+  <title>emb-todo</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-app="ngTodo"><!-- Add directive of app name(same as Ctrl to the body. Add the ng-app to where you want Angular to effect. This case, the full body has power... in diff case you can add only to DIV if desired)-->
+<body>
   <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
-      <a class="navbar-brand" href="#">ng-todo</a>
-      <a class="navbar-right navbar-img" href="#"><img src="img/AngularJS.png" alt=""></a>
+      <a class="navbar-brand" href="#">emb-todo</a>
+      <a class="navbar-right navbar-img" href="#"><img src="img/ember.png" alt=""></a>
     </div>
   </div>
 
-  <section ng-controller="ngTodoCtrl"><!--Add relevent ctrlR, CtrlR only has scope in this section. Find OTHER ways to share if desired -->
+  <!-- script -->
+  <section>
     <div class="outer-container">
 
       <div class="add-todo-group input-group input-group-lg">
         <span class="input-group-addon">
           <i class="glyphicon glyphicon-list-alt"></i>
         </span>
-        <input ng-model="newTask" placeholder="New Todo" class="form-control" type="text">
-         <!-- Adding a ng-model with property called newTask. NOw when I refer to 'newTask' in my {{ }} syntax it will know what I am referrign to. 2-Way Binding-->
-
-         {{newTask | altCaps}} <!--Showing a quicl preview of filter applied although undefined-->
-    
+        <input class="form-control" type="text" id="new-todo" placeholder="New Todo"> <!-- input value action -->
         <span class="input-group-btn">
-          <button class="btn btn-success" ng-click="addNewTask()" type="button"><!--Added ng-click directive, now 'on click' this will run the "addNewTask" Function I created in controller -->
+          <button class="btn btn-success" type="button"> <!-- action createNewTodo -->
             <i class="glyphicon glyphicon-plus"></i>
           </button>
         </span>
       </div>
-
-      <div ng-repeat="todo in todos" class="input-group input-group-lg"><!--repeat the todo in the 'todos' var -->
+      <!-- each -->
+      <div class="input-group input-group-lg">
         <span class="input-group-addon">
-          <input ng-model="todo.completed"type="checkbox"> <!-- model -->
+          <input type="checkbox">
         </span>
-        <input ng-model="todo.val" ng-class="{finished: todo.completed}" class="form-control" type="text"><!-- model / class  -->
+
+        <input class="form-control"> <!-- value classNameBindings -->
         <span class="input-group-btn">
-          <!-- Added REMOVE function to 'X' click. Better to add this power to not on template but controller maybe. $index is whereever you are in the todo-->
-          <button ng-click="removeTodo($index)" class="btn btn-danger" type="button">
-            <!--Added my Directive to the 'X' removal btn-->
-            <i complete-color="todo.completed" class="glyphicon glyphicon-remove"></i>
+          <button class="btn btn-danger" type="button"> <!-- action -->
+            <i class="glyphicon glyphicon-remove"></i>
           </button>
         </span>
       </div>
+      <!-- /each -->
 
       <div class="btn-clear-group">
-        <button ng-click="clearCompleted()" class="btn btn-primary btn-clear">Clear Completed</button><!-- click -->
+        <button class="btn btn-primary btn-clear">Clear Completed</button> <!-- action -->
       </div>
     </div>
   </section>
+  <!-- /script -->
+
+  <!-- JS Assets -->
+  <script src="js/jquery-2.0.2.js"></script>
+  <script src="js/handlebars-v1.2.1.js"></script>
+  <script src="js/ember.js"></script>
+  <script src="js/ember-data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/models.js"></script>
+  <script src="js/fixtures.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/controllers.js"></script>
 </body>
 
-<!-- JS Assets -->
-<script src="js/angular.min.js"></script>
-<script src="js/app.js"></script>
-<script src="js/filters.js"></script>
-<script src="js/directives.js"></script>
-<script src="js/ngTodoCtrl.js"></script>
 </html>
