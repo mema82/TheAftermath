@@ -21,6 +21,11 @@ Todos.TodosController = Ember.ArrayController.extend ({
 			});
 			this.set('newtodo', ''); // set new todo to blank and save prev value to list
 			todo.save();
+		} ,
+		clearCompleted: function() {
+			var completed = this.filterBy('completed', true);//find all TRUE completed items
+			completed.invoke('deleteRecord'); //invoke this deletedRecord on all TRUE completed
+			completed.invoke('save'); // Save the view with after deleted TRUE completed items
 		}
 	}
 });

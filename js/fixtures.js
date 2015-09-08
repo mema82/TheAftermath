@@ -5,27 +5,27 @@ Todos.Todo = Todos.Todo || {};
 Todos.Todo.FIXTURES = [ // Look for .FIXTURES when looking for fixture data b.c on fixture adapter
  {
    id: 1,
-   val: 'Learn Ember.js',
+   val: 'Apples',
    completed: true
  },
  {
    id: 2,
-   val: 'Banana for Scale',
+   val: 'Bananas',
    completed: false
  },
  {
    id: 3,
-   val: 'Puppies',
+   val: 'Pears',
    completed: false
  },
  {
   id: 4,
-  val: 'Duck sized horse',
+  val: 'Oranges',
   completed: true
  },
  {
   id: 5,
-  val: 'Horse-sized duck',
+  val: 'Grapes',
   completed: false
  }
 ];
