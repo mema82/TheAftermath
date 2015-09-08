@@ -24,21 +24,19 @@
           <span class="input-group-addon">
             <i class="glyphicon glyphicon-list-alt"></i>
           </span>
-          {{input class="form-control" type="text" id="new-todo" placeholder="New Todo"> /* input value action*/
-          value=newTodo action="createNewTodo"}}
+
+          {{input value=newTodo class="form-control" type="text" id="new-todo" placeholder="New Todo"}}/* input value action*/
           <span class="input-group-btn">
-            <button class="btn btn-success" type="button"> /*action createNewTodo*/
+            <button {{action "createNewTodo"}} class="btn btn-success" type="button"> /*action createNewTodo*/
               <i class="glyphicon glyphicon-plus"></i>
             </button>
           </span>
         </div>
 
-
         <!-- each-->
-
             {{#each itemController="todo"}} //# to create the scope. for each item in the itemController named "todo"
               
-            {{todo-entry val=val completed=completed remove="removeTodo"}} /*Taking parent value and looping down to entry components to display correctly*/
+            {{todo-entry val=val completed=completed remove="removeTodo"}} /*Taking parent value remove and looping down to entry components to display correctly*/
             {{/each}} // Telling where to END the each / repeat
         <!-- /each -->
 
@@ -61,7 +59,7 @@
        <!-- <input {{bind-attr value="val" class=":form-control completed:finished"}} type="text"> -->
       
         <span class="input-group-btn">
-        <button class="btn btn-danger" type="button" {{action "click"}}> //action
+        <button class="btn btn-danger" type="button" {{action "click"}}> //action when clicked call function
            <i class="glyphicon glyphicon-remove"></i>
         </button>
      </span>
