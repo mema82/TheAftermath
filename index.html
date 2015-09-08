@@ -16,7 +16,7 @@
   </div>
 
   <!-- script -->
-  <script type="text/x-handlebars" data-template-name="todos">/*Tellsto connect to Todos part*/
+  <script type="text/x-handlebars" data-template-name="todos"><!--Tells to connect to Todos part-->
     <section>
       <div class="outer-container">
 
@@ -25,23 +25,23 @@
             <i class="glyphicon glyphicon-list-alt"></i>
           </span>
 
-          {{input value=newTodo class="form-control" type="text" id="new-todo" placeholder="New Todo"}}/* input value action*/
+          {{input value=newTodo class="form-control" type="text" id="new-todo" placeholder="New Todo"}}<!-- input value action-->
           <span class="input-group-btn">
-            <button {{action "createNewTodo"}} class="btn btn-success" type="button"> /*action createNewTodo*/
+            <button {{action "createNewTodo"}} class="btn btn-success" type="button"> <!--action createNewTodo-->
               <i class="glyphicon glyphicon-plus"></i>
             </button>
           </span>
         </div>
 
         <!-- each-->
-            {{#each itemController="todo"}} //# to create the scope. for each item in the itemController named "todo"
+            {{#each itemController="todo"}} <!-- # to create the scope. for each item in the itemController named "todo"-->
               
-            {{todo-entry val=val completed=completed remove="removeTodo"}} /*Taking parent value remove and looping down to entry components to display correctly*/
-            {{/each}} // Telling where to END the each / repeat
+            {{todo-entry val=val completed=completed remove="removeTodo"}} <!--Taking parent value remove and looping down to entry components to display correctly-->
+            {{/each}} <!--Telling where to END the each / repeat-->
         <!-- /each -->
 
         <div class="btn-clear-group">
-          <button {{action "clearCompleted"}} class="btn btn-primary btn-clear">Clear Completed</button> // action 
+          <button {{action "clearCompleted"}} class="btn btn-primary btn-clear">Clear Completed</button>
         </div>
       </div>
     </section>
@@ -59,7 +59,7 @@
        <!-- <input {{bind-attr value="val" class=":form-control completed:finished"}} type="text"> -->
       
         <span class="input-group-btn">
-        <button class="btn btn-danger" type="button" {{action "click"}}> //action when clicked call function
+        <button class="btn btn-danger" type="button" {{action "click"}}> <!--action when clicked call func-->
            <i class="glyphicon glyphicon-remove"></i>
         </button>
      </span>
