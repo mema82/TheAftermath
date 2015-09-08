@@ -16,7 +16,7 @@
   </div>
 
   <!-- script -->
-  <script type="text/x-handlebars" data-template-name="todos"><!--Tell that connects to Todos part-->
+  <script type="text/x-handlebars" data-template-name="todos">/*Tellsto connect to Todos part*/
     <section>
       <div class="outer-container">
 
@@ -24,42 +24,48 @@
           <span class="input-group-addon">
             <i class="glyphicon glyphicon-list-alt"></i>
           </span>
-          <input class="form-control" type="text" id="new-todo" placeholder="New Todo"> <!-- input value action -->
+          {{input class="form-control" type="text" id="new-todo" placeholder="New Todo"> /* input value action*/
+          value=newTodo action="createNewTodo"}}
           <span class="input-group-btn">
-            <button class="btn btn-success" type="button"> <!-- action createNewTodo -->
+            <button class="btn btn-success" type="button"> /*action createNewTodo*/
               <i class="glyphicon glyphicon-plus"></i>
             </button>
           </span>
         </div>
-        <!-- each / repeat-->
-            {{#each itemController="todo"}} //# = scope. This will have irems
-              {{todo-entry val=val completed=completed}}
 
-        {{ /each }} // Telling where to END the each / repeat
+
+        <!-- each-->
+
+            {{#each itemController="todo"}} //# to create the scope. for each item in the itemController named "todo"
+              
+            {{todo-entry val=val completed=completed remove="removeTodo"}} /*Taking parent value and looping down to entry components to display correctly*/
+            {{/each}} // Telling where to END the each / repeat
         <!-- /each -->
 
         <div class="btn-clear-group">
-          <button class="btn btn-primary btn-clear">Clear Completed</button> <!-- action -->
+          <button {{action "clearCompleted"}} class="btn btn-primary btn-clear">Clear Completed</button> // action 
         </div>
       </div>
     </section>
     </script>
+
   <!-- /script Template of Our component-->
   <script type="text/x-handlebars" id="components/todo-entry">
+
   <div class="input-group input-group-lg">
      <span class="input-group-addon">
-       {{ input type="checkbox" checked=completed }}
+       {{input checked=completed type="checkbox"}}
      </span>
 
-      {{input value=val classNameBindings=":form-control completed:finished" value=val}}
-      <!-- <input {{bind-attr value="val" class=":form-control completed:finished"}} type="text"> -->
+      {{input value=val classNameBindings=":form-control completed:finished"}}
+       <!-- <input {{bind-attr value="val" class=":form-control completed:finished"}} type="text"> -->
+      
         <span class="input-group-btn">
-        <button class="btn btn-danger" type="button"> <!-- action -->
+        <button class="btn btn-danger" type="button" {{action "click"}}> //action
            <i class="glyphicon glyphicon-remove"></i>
         </button>
      </span>
   </div>
-
   </script>
 
   <!-- JS Assets -->

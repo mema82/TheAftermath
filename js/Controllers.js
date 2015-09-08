@@ -1,4 +1,4 @@
-Todos.TodoController =Ember.ObjectController.extend({
+Todos.TodoController = Ember.ObjectController.extend({
 	//Will define actions that can happen to the object
 	actions: {
 
