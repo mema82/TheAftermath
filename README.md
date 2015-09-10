@@ -13,8 +13,6 @@ Stay tuned for my opinions on this framework.
 
 ### The Install Process 
 
-Each framework project has a branch with an designated README
-
 Coming Soon
 
 
