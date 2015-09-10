@@ -10,7 +10,7 @@ JS Frameworks come out so frequently that to become a master may be nearm to imp
 
 
 ### The Install Process 
-Each framework project has a branch with an designated README.
+Each framework project has a branch with an designated README
 
 1. Visit Framework branch that you want to view
 2. Follow those instruction in the README
