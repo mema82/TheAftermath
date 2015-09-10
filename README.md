@@ -2,7 +2,7 @@
 
 ### The Goal 
 
-I am just looking to get a feel for the differences between each of the above mentioned frameworks by practicing with a simple TODO project. 
+I am just looking to get a feel for the differences between each of the above mentioned frameworks by practicing with a simple Todo project.
 
 ### The Reason
 
