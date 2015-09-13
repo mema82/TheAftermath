@@ -1,4 +1,13 @@
 window.TodoView = Backbone.View.extend({
+	//create event obj
+	events: {
+		'change input[type=checkbox]' : 'toggle'
+	},
+
+	toggle: function() {
+		this.model.toggle();
+	},
+
 	template: _.template('<span class="input-group-addon"><input <%= completed ? "checked=checked" : "" %> type="checkbox"></span><input value="<%= val %>" class="form-control<%= completed ? " finished" : "" %>" type="text"><span class="input-group-btn"><button class="btn btn-danger" type="button"><i class="glyphicon glyphicon-remove"></i></button></span>'),
 
 	render: function() {
