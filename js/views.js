@@ -11,6 +11,12 @@ window.TodoView = Backbone.View.extend({
 
 //Display ONE Item - All below mimics the ng-repeat directive
 window.TodosView = Backbone.View.extend({
+	initialize: function() { //below are event listeners for the collection/model Level
+		this.collection.on('add', this.addOne, this); //do this on add
+		this.collection.on('reset', this.addAll, this);//do this on reset
+		this.collection.on('destroy', this.render, this);//do this on destroy
+	},
+
 	addOne: function(todoItem){
 		var todoView = new TodoView({model: todoItem}); //the info is from model
 		this.$el.append(todoView.render().el); //appends to list and renders
