@@ -11,7 +11,10 @@ JS Frameworks come out so frequently that to become a master may be nearm to imp
 
 ### The Install Process 
 
-Stay tuned. Project is WIP
+Each framework project has a BRANCH with an designated README
+
+1. Visit Framework BRANCH that you want to view off master dropdown 
+2. Follow those instructions in the README
 
 
 ### The Aftermath
