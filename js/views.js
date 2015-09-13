@@ -1,5 +1,11 @@
 window.TodoView = Backbone.View.extend({
-	//create event obj
+
+//This change occurs on model (CONTEXT IS EVERYTHING)
+	initialize: function() { //if any changes on 'this' model gp and re-render yourself
+		this.model.on('change', this.render, this);
+	},
+
+	//create event obj. This CHANGE occurs on checkbox for toggle (CONTEXT IS EVERYTHING)
 	events: {
 		'change input[type=checkbox]' : 'toggle'
 	},
