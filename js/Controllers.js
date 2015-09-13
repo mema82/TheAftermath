@@ -8,7 +8,7 @@ Todos.TodosController = Ember.ArrayController.extend ({
 				val: newVal , // gets new val
 				completed: false // sets to false completed
 			});
-			this.set('newtodo', ''); // set new todo to blank and save prev value to list
+			this.set('newTodo', ''); // set new todo to blank and save prev value to list
 			todo.save();
 		} ,
 		clearCompleted: function() {
