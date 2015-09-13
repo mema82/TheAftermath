@@ -37,6 +37,6 @@ window.TodosView = Backbone.View.extend({
 
 	filterCompleted: function() {
 		this.collection.filterCompleted();
-		//this.render();
+		this.render();
 		}
 });
