@@ -18,10 +18,9 @@ window.TodoApp = new (Backbone.Router.extend({
 
 		$('#app').html(this.todosView.el);
 		this.todoItems.reset(fixtures); //Reset will just fill out with updated model
-
 	},
+	
 	start: function() { // To load all BB first
 		Backbone.history.start(); //then track html history. Html push states.
 	}
-
 }));
