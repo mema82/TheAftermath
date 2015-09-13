@@ -1,9 +1,9 @@
 // This is so you don't have to type up dummy data.
 var app = app || {};
 app.FIXTURES = [
-  {val: 'Such task', completed:true},
-  {val: 'Much productivity', completed: true},
-  {val: 'So business', completed: false},
-  {val: 'Wow', completed: false},
-  {val: 'To the moon!', completed: true}
+  {val: 'So much Todo', completed:true},
+  {val: 'So little time', completed: true},
+  {val: 'A bit less verbose', completed: false},
+  {val: 'Then the BB app of mine', completed: false},
+  {val: 'We shall see who wins best MVC' , completed: true}
 ];
