@@ -5,6 +5,11 @@ window.TodoApp = new (Backbone.Router.extend({
 		this.todoItems = new TodoItems();
 		this.todosView = new TodosView({collection: this.todoItems});
 		this.todosView.render();// start everything off with a first Render
+
+		//using JQ outside of app render view. Btn is in index so we have to handle somehow.
+		$('.btn-clear').click(function(e) {
+			window.TodoApp.todosView.filterCompleted()
+		});
 	},
 
 	index: function() {
