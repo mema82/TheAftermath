@@ -3,10 +3,10 @@ window.TodoApp = new (Backbone.Router.extend({
 	routes: { '' : 'index'}, //when base route ('') run the index function/controller
 	initialize: function() { //init the following
 		this.todoItems = new TodoItems();
-		this.todosView = new TodoView({collection: this.todoItems});
+		this.todosView = new TodosView({collection: this.todoItems});
 		this.todosView.render();// start everything off with a first Render
-
 	},
+
 	index: function() {
 		//Add fixture data
 		var fixtures = [
