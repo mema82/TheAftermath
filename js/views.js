@@ -33,5 +33,10 @@ window.TodosView = Backbone.View.extend({
 	render: function() { //adds all and renders for return
 		this.addAll();
 		return this;
-	}
+	},
+
+	filterCompleted: function() {
+		this.collection.filterCompleted();
+		//this.render();
+		}
 });
