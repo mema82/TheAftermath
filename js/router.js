@@ -10,8 +10,13 @@ window.TodoApp = new (Backbone.Router.extend({
 		$('.btn-clear').click(function(e) {
 			window.TodoApp.todosView.filterCompleted()
 		});
-	},
 
+		$('.btn-success').click(function() {
+			window.TodoApp.todoItems.add({val:$("#newTodo").val(), completed: false}); //Add new value in todo on click
+			$("#newTodo").val(''); //clear it out
+		});
+	},
+	
 	index: function() {
 		//Add fixture data
 		var fixtures = [
