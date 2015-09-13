@@ -11,17 +11,34 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 
 //root components
 var TodoApp = app.components.TodoApp = React.createClass({
-	render: function () {
+//coming back to add init state
+	getInitialState: function() {
+		return {
+			todos:[]
+		};
+	},
+
+	componentDidMount: function() {
+		var data = app.getData();
+		this.setState({todos: data});
+		console.log(this.state);
+
+	},
+
+
+	render: function () {//Adding the 3 components before defining
 		return (
 			<div className="outer-container">
-				//Adding the 3 components before defining
+				
 				<NewTodo />
-				<TodoList />
+				<TodoList 
+					todos={this.state.todos} //passing todo prop to todos list component
+					/>
+
 				<ClearCompleted />
 			</div>
 			);
 		}
-
 	});
 
 	//Declaring above components
@@ -46,7 +63,7 @@ var TodoApp = app.components.TodoApp = React.createClass({
 		var ClearCompleted = app.components.ClearCompleted = React.createClass({
 		render: function() {
 
-			return(
+			return (
 				<h1>Clear Completed</h1>
 				);
 		}
