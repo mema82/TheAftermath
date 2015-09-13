@@ -2,6 +2,11 @@
 window.TodoItem = Backbone.Model.extend({}); //1 Item
 
 window.TodoItems = Backbone.Collection.extend({ //collection of Items
-	model: TodoItem
+	model: TodoItem,
+	filterCompleted: function() {
+		this.remove(this.filter(function(item) { //filters completed out
+			return item.get('completed'); 
+		}));
+	}
 });
 
