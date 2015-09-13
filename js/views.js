@@ -19,7 +19,8 @@ window.TodosView = Backbone.View.extend({
 //Add all 
 	addAll: function() {
 		this.$el.empty(); //Clears input
-		this.collection.forEach(this.addOne, this);//this adds collection in input
+		//collection refers to underlying collection
+		this.collection.forEach(this.addOne, this);//this adds collection in 'this' input
 	},
 
 //Render all
@@ -27,5 +28,4 @@ window.TodosView = Backbone.View.extend({
 		this.addAll();
 		return this;
 	}
-
 });
