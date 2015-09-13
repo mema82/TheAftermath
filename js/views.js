@@ -7,7 +7,17 @@ window.TodoView = Backbone.View.extend({
 
 	//create event obj. This CHANGE occurs on DOM. The Views checkbox for toggle (CONTEXT IS EVERYTHING)
 	events: {
-		'change input[type=checkbox]' : 'toggle' //any changes on checkboxes ONLY. Would normally do on class or IDs.
+		'change input[type=checkbox]' : 'toggle', //any changes on checkboxes ONLY. Would normally do on class or IDs.
+		'change .form-control' : 'update',//Updates underlying modes -  2-way data binding
+		'click .btn-danger' : 'remove'
+	},
+
+	update: function() {
+		this.model.updateText(this.$('.form-control').val()); //Updates underlying modes from within selected . view
+	},
+
+	remove: function() {
+		this.model.destroy(); //destroy is a BkBn function. Just tell what to do on the destroy event
 	},
 
 	toggle: function() {
