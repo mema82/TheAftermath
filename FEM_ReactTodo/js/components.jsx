@@ -14,11 +14,42 @@ var TodoApp = app.components.TodoApp = React.createClass({
 	render: function () {
 		return (
 			<div className="outer-container">
-				<p>Cool stuff</p>
+				//Adding the 3 components before defining
+				<NewTodo />
+				<TodoList />
+				<ClearCompleted />
 			</div>
 			);
 		}
 
+	});
+
+	//Declaring above components
+	var NewTodo = app.components.NewTodo = React.createClass({
+		render: function() {
+
+			return(
+				<h1>New Todo</h1>
+				);
+		}
+	});
+
+		var TodoList = app.components.TodoList = React.createClass({
+		render: function() {
+
+			return(
+				<h1>Todo List </h1>
+				);
+		}
+	});
+
+		var ClearCompleted = app.components.ClearCompleted = React.createClass({
+		render: function() {
+
+			return(
+				<h1>Clear Completed</h1>
+				);
+		}
 	});
 
 })();
