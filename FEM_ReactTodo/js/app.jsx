@@ -18,11 +18,6 @@ var app = app || {}; // app = new app or new object. Use exisitng if not create 
 
 	};
 
-	app.getData = function () {
-
-		return app.FIXTURES;
-	};
-
 	app.init(); // gets app up anf running
 
 })();
