@@ -1,4 +1,4 @@
-# MVC 3 of 4: ReactJS ToDo 
+# MVC 4 of 4: ReactJS ToDo 
 
 ### The Opinion
 Stay tuned for my opinions on this framework
