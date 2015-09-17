@@ -10,10 +10,10 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 	'use strict';
 
 //root components
-var TodoApp = app.components.TodoApp = React.createClass({
+var TodoApp = app.components.TodoApp = React.createClass({ //root component
 	render: function () {
 		return (
-			<div className="outer-container">
+			<div className="outer-container"> 
 				<p>Cool stuff</p>
 			</div>
 			);
@@ -22,6 +22,23 @@ var TodoApp = app.components.TodoApp = React.createClass({
 	});
 
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
