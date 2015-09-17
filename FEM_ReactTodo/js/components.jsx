@@ -1,7 +1,6 @@
 /** @jsx React.DOM */
 
 var app = app || {};
-
 app.components = app.components || {}; //sometimes multiple files will be adding components
 
 //IIFE - protects agains global pollution
@@ -12,6 +11,16 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 
 	//root components
 	var TodoApp = app.components.TodoApp = React.createClass({ //root component
+		getInitialState: function() {
+			return {
+				todos: [] //returns an Object that has a todos
+			};
+		},
+
+		componentDidMount: function () {
+			var data = app.retrieveData();
+		},
+
 		render: function () {
 			return (
 			<div className="outer-container"> 
