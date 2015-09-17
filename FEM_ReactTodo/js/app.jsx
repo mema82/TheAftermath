@@ -15,8 +15,12 @@ var app = app || {}; // app = new app or new object. Use exisitng if not create 
 			Says we want a TodoApp component rendered at the app Id*/
 				document.getElementById('app')
 			);
-
 	};
+
+//retrieve ajax or any data thats being used
+		app.retrieveData = function () {
+			return app.FIXTURES;
+		};
 
 	app.init(); // gets app up anf running
 
