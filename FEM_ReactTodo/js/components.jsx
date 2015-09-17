@@ -19,6 +19,7 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 
 		componentDidMount: function () {
 			var data = app.retrieveData();
+			this.setState({todos: data});
 		},
 
 		render: function () {
