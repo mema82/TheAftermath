@@ -7,20 +7,20 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 //IIFE - protects agains global pollution
 
 (function() {
-	'use strict';
 
-//root components
-var TodoApp = app.components.TodoApp = React.createClass({ //root component
-	render: function () {
-		return (
+'use strict';
+
+	//root components
+	var TodoApp = app.components.TodoApp = React.createClass({ //root component
+		render: function () {
+			return (
 			<div className="outer-container"> 
 				<NewTodo />
-				<Todo List />
+				<TodoList />
 				<clearCompleted />
 			</div>
 			);
 		}
-
 	});
 	var NewTodo = app.components.NewTodo = React.createClass({
 		render: function () {
@@ -46,24 +46,4 @@ var TodoApp = app.components.TodoApp = React.createClass({ //root component
 		}
 	});
 
-})();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	})();
