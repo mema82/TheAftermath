@@ -14,7 +14,9 @@ var TodoApp = app.components.TodoApp = React.createClass({ //root component
 	render: function () {
 		return (
 			<div className="outer-container"> 
-				<p>Cool stuff</p>
+				<NewTodo />
+				<Todo List />
+				<clearCompleted />
 			</div>
 			);
 		}
