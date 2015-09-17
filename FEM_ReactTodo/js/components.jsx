@@ -44,11 +44,45 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 
 	var TodoList = app.components.TodoList = React.createClass({
 		render: function () {
-			return(
-				<h1>Todo List</h1>
-				);
+			return (
+				<div className="todos">
+				{this.props.todos.map(function(el, index) { //eqiv of ng-repeat in list in vanilla JS. Matches up with above todos
+					return (
+						<TodoItem
+						todo={el}
+						index={index}
+						/>
+
+						);
+				})}
+					</div>
+			);
 		}
 	});
+
+		var TodoItem =app.components.TodoItem = React.createClass({
+			render: function () {
+				var inputClassName = "form-control";
+				if (this.props.todo.completed) {
+					inputClassName += " finished";
+				}
+
+				return (
+					<div className="input-group input-group-lg">
+						<span className="input-group-addon">
+							<input checked={this.props.todo.completed} type="checkbox" />
+						</span>
+						<input type="text" value={this.props.todo.val} className={inputClassName} />
+						<span className="input-group-btn">
+							<button className="btn btn-danger" type="button">
+								<i className="glyphicon glyphicon-remove"></i>
+							</button>
+						</span>
+					</div>
+				);
+			}
+		});
+
 
 	var clearCompleted = app.components.clearCompleted = React.createClass({
 		render: function () {
