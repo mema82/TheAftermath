@@ -7,6 +7,7 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 //IIFE - protects agains global pollution
 
 (function() {
+
 'use strict';
 
 	//root components
@@ -21,28 +22,28 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 			);
 		}
 	});
-
 	var NewTodo = app.components.NewTodo = React.createClass({
 		render: function () {
 			return(
-			<h1>NewTodo</h1>
-			);
+				<h1>NewTodo</h1>
+				);
 		}
 	});
 
 	var TodoList = app.components.TodoList = React.createClass({
 		render: function () {
 			return(
-			<h1>Todo List</h1>
-			);
+				<h1>Todo List</h1>
+				);
 		}
 	});
 
 	var clearCompleted = app.components.clearCompleted = React.createClass({
 		render: function () {
 			return(
-			<h1>Clear Completed</h1>
-			);
+				<h1>Clear Completed</h1>
+				);
 		}
 	});
+
 	})();
