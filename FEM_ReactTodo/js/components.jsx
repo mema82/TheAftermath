@@ -26,7 +26,9 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 			return (
 			<div className="outer-container"> 
 				<NewTodo />
-				<TodoList />
+				<TodoList //Component
+				todos={this.state.todos} //run this expression as a prop on my todo
+				/>
 				<clearCompleted />
 			</div>
 			);
