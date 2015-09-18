@@ -34,6 +34,8 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 				<NewTodo />
 				<TodoList //Component
 				todos={this.state.todos} //run this expression as a prop on my todo
+				updateVal={this.updateVal} //run updateVal() on this child element. Otherwise it won't know to update.
+
 				/>
 				<clearCompleted />
 			</div>
@@ -57,10 +59,11 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 						<TodoItem
 						todo={el}
 						index={index}
+						updateVal={this.props.updateVal}//coming from props. The THIS here will refer to an array so you must bind THIS to context. shown below (line 66)
 						/>
 
 						);
-				})}
+				}.bind(this))} 
 					</div>
 			);
 		}
