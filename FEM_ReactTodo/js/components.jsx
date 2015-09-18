@@ -70,6 +70,10 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 	});
 
 		var TodoItem =app.components.TodoItem = React.createClass({
+			handleVal: function (e) {
+				this.props.updateVal(e.target.value, this.props.index); //calls update Val from above
+			},
+
 			render: function () {
 				var inputClassName = "form-control";
 				if (this.props.todo.completed) {
@@ -81,7 +85,7 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 						<span className="input-group-addon">
 							<input checked={this.props.todo.completed} type="checkbox" />
 						</span>
-						<input type="text" value={this.props.todo.val} className={inputClassName} />
+						<input onChange={this.handleVal} type="text" value={this.props.todo.val} className={inputClassName} />
 						<span className="input-group-btn">
 							<button className="btn btn-danger" type="button">
 								<i className="glyphicon glyphicon-remove"></i>
@@ -91,7 +95,6 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 				);
 			}
 		});
-
 
 	var clearCompleted = app.components.clearCompleted = React.createClass({
 		render: function () {
