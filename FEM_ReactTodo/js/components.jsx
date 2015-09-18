@@ -17,6 +17,12 @@ app.components = app.components || {}; //sometimes multiple files will be adding
 			};
 		},
 
+		updateVal: function (val, index) { //updating vals and index function
+			var state = this.state; // update current state
+			state.todos[index].val = val; // update the current index
+			this.setState(state); //now save the updates
+		},
+
 		componentDidMount: function () {
 			var data = app.retrieveData();
 			this.setState({todos: data});
