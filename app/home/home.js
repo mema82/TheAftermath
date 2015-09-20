@@ -1,6 +1,6 @@
 'use strict';
  
-angular.module('MummyApp.home', ['ngRoute'])
+angular.module('MummyApp.home', ['ngRoute','firebase'])
  
 // Declared route 
 .config(['$routeProvider', function($routeProvider) {
