@@ -1,6 +1,6 @@
 <!-- index.html -->
     <!DOCTYPE html>
-    <html>
+    <html ng-app="mummyApp"><!--NEED this to Define App-->
     <head>
       <!-- SCROLLS -->
       <!-- load bootstrap and fontawesome via CDN -->
@@ -15,7 +15,7 @@
           <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
       <script src="script.js"></script>
     </head>
-    <body>
+    <body ng-controller="mainCtrl"><!--NEED this to DEFINE the Controller-->
 
         <!-- HEADER AND NAVBAR -->
         <header>
@@ -36,6 +36,8 @@
 
         <!-- MAIN CONTENT AND INJECTED VIEWS -->
         <div id="main">
+
+          {{messege}}
 
             <!-- angular templating -->
             <!-- this is where content will be injected -->
