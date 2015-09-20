@@ -6,4 +6,8 @@ angular.module('MummyApp', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   //Routes will go here
+
+  $routeProvider.otherwise({
+        redirectTo: '/home'
+    });
 }]);
