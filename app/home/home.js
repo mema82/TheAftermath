@@ -21,5 +21,26 @@ angular.module('MummyApp.home', ['ngRoute','firebase'])
 	var firebaseObj = new Firebase("https://binding-torch-1624.firebaseIO.com")
 		var loginObj = $firebaseSimplelogin(firebaseObj);
 	}
+
+	$scope.SignIn = function(event) {
+		event.preventDefault(); //Prevent Refresh
+		var username = $scope.user.email;
+		var password = $scope.user.password;
+
+		loginObj.$login('password' , {
+			email: username,
+			password: password
+		})
+		.then(function(user) {
+			//Success Callback
+			console.log('Auth Successful');
+		}, 
+		function(error) {
+			//Failed Callback
+			console.log('Auth Fail');
+		});
+	}
+
+}
  
 }]);
