@@ -11,7 +11,7 @@ angular.module('MummyApp.home', ['ngRoute','firebase'])
 }])
  
 // Home controller
-.controller('HomeCtrl', [function() {
+.controller('HomeCtrl', ['$scope' , '$firebaseSimplelogin' ,function($scope, $firebaseSimpleLogin) {
 	$scope.SignIn = function($scope) {
 		var username = $scope.user.email;
 		var password = $scope.user.password;
@@ -19,6 +19,7 @@ angular.module('MummyApp.home', ['ngRoute','firebase'])
 	//Auth login will go here
 
 	var firebaseObj = new Firebase("https://binding-torch-1624.firebaseIO.com")
+		var loginObj = $firebaseSimplelogin(firebaseObj);
 	}
  
 }]);
