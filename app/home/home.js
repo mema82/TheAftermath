@@ -12,5 +12,11 @@ angular.module('MummyApp.home', ['ngRoute','firebase'])
  
 // Home controller
 .controller('HomeCtrl', [function() {
+	$scope.SignIn = function($scope) {
+		var username = $scope.user.email;
+		var password = $scope.user.password;
+
+	//Auth login will go here
+	}
  
 }]);
