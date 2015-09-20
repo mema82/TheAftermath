@@ -17,6 +17,8 @@ angular.module('MummyApp.home', ['ngRoute','firebase'])
 		var password = $scope.user.password;
 
 	//Auth login will go here
+
+	var firebaseObj = new Firebase("https://binding-torch-1624.firebaseIO.com")
 	}
  
 }]);
