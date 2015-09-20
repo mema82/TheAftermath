@@ -6,13 +6,12 @@
     <title>Mummy Web App</title>
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
-    <link href="justified-nav.css" rel="stylesheet">
     <script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
     <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
 </head>
  
-<body>
+<body ng-controller="HomeCtrl">
  
     <div class="container">
         <div class="jumbotron" style="padding-bottom:0px;">
@@ -24,13 +23,11 @@
             <label class="checkbox">
                 <a href="#"> Sign Up</>
         </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button ng-click="SignIn($event)" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
  
     </div>
- 
-   
- 
+
 </body>
 
 </html>
