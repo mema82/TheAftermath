@@ -60,4 +60,3 @@ mummyApp.controller('chap2Ctrl' , function($scope) {
 
 
 
-
