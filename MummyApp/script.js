@@ -1,5 +1,5 @@
 //create main modulevar 
-myApp = angular.module('mummyApp', ['ngRoute']);
+mummyApp = angular.module('mummyApp', ['ngRoute']);
 
 //Route Configs
 mummyApp.config(function($routeProvider) {
