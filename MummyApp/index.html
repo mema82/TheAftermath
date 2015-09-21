@@ -6,9 +6,7 @@
       <!-- load bootstrap and fontawesome via CDN -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-      
-
+      <!-- Mummy icon by Icons8 -->
       <!-- SPELLS -->
       <!-- load angular and angular route via CDN -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
@@ -26,9 +24,11 @@
                 </div>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                    <li><a href="#"><img src="https://maxcdn.icons8.com/Color/PNG/24/Holidays/headstone-24.png" title="Headstone" width="24"></i> Home</a></li>
+                    
+                    <li><a href="#WhoaMummy"><img src="https://maxcdn.icons8.com/Color/PNG/24/Holidays/mummy-24.png" title="Mummy" width="24"></i> Whoa, Mummy</a></li>
+                    
+                    <li><a href="#NaturalMummies"><img src="https://maxcdn.icons8.com/Color/PNG/24/Holidays/mummy-24.png" title="Mummy" width="24"></i>  Natural Mummies</a></i></a></li>
                 </ul>
             </div>
             </nav>
@@ -37,12 +37,14 @@
         <!-- MAIN CONTENT AND INJECTED VIEWS -->
         <div id="main">
 
-          {{messege}}
+         
 
             <!-- angular templating -->
             <!-- this is where content will be injected -->
-
+              <div ng-view></div>
         </div>
-
+  <footer>
+    <!--<a href="https://icons8.com">Icon pack by Icons8</a>-->
+  </footer>
     </body>
     </html>
