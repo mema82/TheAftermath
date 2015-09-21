@@ -13,14 +13,14 @@ mummyApp.config(function($routeProvider) {
 		})
 
 		//Chap 1 Whoa Mummy
-		.when('/WhoaMummy.html', {
+		.when('/WhoaMummy', {
 
 			templateUrl : 'partials/WhoaMummy.html' ,
 			controller : 'chap1Ctrl'
 		})
 
 		//Chap 2 Natural Mummies
-		.when('/NaturalMummies' ,{
+		.when('/NaturalMummies' , {
 
 			templateUrl: 'partials/NaturalMummies.html' ,
 			controller : 'chap2Ctrl'
