@@ -33,19 +33,19 @@ mummyApp.config(function($routeProvider) {
 mummyApp.controller('mainCtrl' , function($scope) {
 
 	//messege to show which view your on
-	$scope.message = "Home";
+	$scope.title = "Home";
 });
 
 mummyApp.controller('chap1Ctrl' , function($scope) {
 
 	//messege to show which view your on
-	$scope.message = "Chap 1!";
+	$scope.title= "Chap 1!";
 });
 
 mummyApp.controller('chap2Ctrl' , function($scope) {
 
 	//messege to show which view your on
-	$scope.message = "This is Chap 2!";
+	$scope.title = "This is Chap 2!";
 });
 
 
