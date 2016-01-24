@@ -34,6 +34,7 @@ mummyApp.controller('mainCtrl' , function($scope) {
 
 	//messege to show which view your on
 	$scope.title = "Home";
+
 });
 
 mummyApp.controller('chap1Ctrl' , function($scope) {
