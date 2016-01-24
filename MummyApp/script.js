@@ -2,9 +2,10 @@
 mummyApp = angular.module('mummyApp', ['ngRoute']);
 
 //Route Configs
-mummyApp.config(function($routeProvider) {
-	$routeProvider
+mummyApp.config(function($routeProvider , $locationProvider) {
 
+
+	$routeProvider
 		//Home route
 		.when('/', {
 
@@ -40,7 +41,7 @@ mummyApp.controller('mainCtrl' , function($scope) {
 mummyApp.controller('chap1Ctrl' , function($scope) {
 
 	//messege to show which view your on
-	$scope.title= "Chap 1!";
+	$scope.title= "Chap 1!";                                 
 });
 
 mummyApp.controller('chap2Ctrl' , function($scope) {
@@ -48,6 +49,11 @@ mummyApp.controller('chap2Ctrl' , function($scope) {
 	//messege to show which view your on
 	$scope.title = "This is Chap 2!";
 });
+
+
+//HTML5 History API - Change route of the URL w/o refreshing the page
+$locationProvider.html5Mode(true);
+
 
 
 
