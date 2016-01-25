@@ -1,5 +1,5 @@
 //create main modulevar 
-mummyApp = angular.module('mummyApp', ['ngRoute']);
+mummyApp = angular.module('mummyApp', ['ngRoute' , 'ngAnimate']);
 
 //Route Configs
 mummyApp.config(function($routeProvider , $locationProvider) {
