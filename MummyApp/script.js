@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream:MummyApp/script.js
 //create main modulevar 
 mummyApp = angular.module('mummyApp', ['ngRoute']);
+=======
+//create main module 
+mummyApp = angular.module('mummyApp', ['ngRoute' , 'ngAnimate']);
+>>>>>>> Stashed changes:MummyApp/Scripts/script.js
 
 //Route Configs
 mummyApp.config(function($routeProvider) {
@@ -17,6 +22,7 @@ mummyApp.config(function($routeProvider) {
 
 			templateUrl : 'partials/WhoaMummy.html' ,
 			controller : 'chap1Ctrl'
+			//css: '<link rel="stylesheet" href="/Styles/chap1.css">' WHY THIS DOES NOT WORK?
 		})
 
 		//Chap 2 Natural Mummies
@@ -29,6 +35,7 @@ mummyApp.config(function($routeProvider) {
 });
 
 
+<<<<<<< Updated upstream:MummyApp/script.js
 //Scope injection - Routes DEFINED
 mummyApp.controller('mainCtrl' , function($scope) {
 
@@ -48,6 +55,14 @@ mummyApp.controller('chap2Ctrl' , function($scope) {
 	$scope.title = "This is Chap 2!";
 });
 
+=======
+//Scope injection - Routes DEFINED in Controllers Folder
+
+
+//HTML5 History API - Change route of the URL w/o refreshing the page
+
+
+>>>>>>> Stashed changes:MummyApp/Scripts/script.js
 
 
 
