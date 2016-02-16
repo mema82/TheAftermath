@@ -21,11 +21,18 @@ mummyApp.config(function($routeProvider , $locationProvider) {
 		
 		})
 
-		//Chap 2 Natural Mummies
+		//Chap 2 Mummy Making
 		.when('/MummyMaking' , {
 
 			templateUrl: 'Views/MummyMaking.html' ,
 			controller : 'chap2Ctrl'
+		})
+
+			//Chap 3 Natural Mummies
+		.when('/NaturalMummies' , {
+
+			templateUrl: 'Views/NaturalMummies.html' ,
+			controller : 'chap3Ctrl'
 		});
 
 });
