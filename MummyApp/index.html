@@ -2,17 +2,19 @@
     <!DOCTYPE html>
     <html ng-app="mummyApp"><!--NEED this to Define App-->
     <head>
-      <!-- SCROLLS -->
-      <!-- load bootstrap and fontawesome via CDN -->
+      <!--Styles-->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
       <!-- Mummy icon by Icons8 -->
       <!-- load angular and angular route via CDN -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
       <script src="script.js"></script>
+      <link rel="stylesheet" href="/Styles/chap1.css">
      </head>
+
     <body ng-controller="mainCtrl"><!--NEED this to DEFINE the Controller-->
 
     <header>
@@ -23,7 +25,8 @@
             </div>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><img src="https://maxcdn.icons8.com/Color/PNG/24/Holidays/headstone-24.png" title="Headstone" width="24"></i> Home</a></li>
+
+                   <li><a href="#"><img src="https://maxcdn.icons8.com/Color/PNG/24/Holidays/headstone-24.png" title="Headstone" width="24"></i> Home</a></li>
                     
                     <li><a href="#WhoaMummy"><img src="https://maxcdn.icons8.com/Color/PNG/24/Holidays/mummy-24.png" title="Mummy" width="24"></i> Whoa, Mummy</a></li>
                     
@@ -36,7 +39,6 @@
         <!-- MAIN CONTENT AND INJECTED VIEWS -->
         <div id="main">
 
-         
 
             <!-- this is where content will be injected -->
               <div ng-view></div>
@@ -44,23 +46,17 @@
   <footer>
     <!--<a href="https://icons8.com">Icon pack by Icons8</a>-->
   </footer>
-    </body>
+  <!--CDN Script libs-->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+       <!--Main Script/Routes-->
+       <script src="/Scripts/script.js"></script>
+       <!--Controllers-->
+       <script src="/Controllers/mainCtrl.js"></script>
+       <script src="/Controllers/chap1Ctrl.js"></script>
+       <script src="/Controllers/chap2Ctrl.js"></script>
+      <script src="/Controllers/chap3Ctrl.js"></script>
+      </body>
     </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    

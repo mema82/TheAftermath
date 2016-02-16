@@ -1,4 +1,4 @@
-//create main modulevar 
+//create main module 
 mummyApp = angular.module('mummyApp', ['ngRoute' , 'ngAnimate']);
 
 //Route Configs
@@ -18,13 +18,21 @@ mummyApp.config(function($routeProvider , $locationProvider) {
 
 			templateUrl : 'Views/WhoaMummy.html' ,
 			controller : 'chap1Ctrl'
+		
 		})
 
-		//Chap 2 Natural Mummies
+		//Chap 2 Mummy Making
+		.when('/MummyMaking' , {
+
+			templateUrl: 'Views/MummyMaking.html' ,
+			controller : 'chap2Ctrl'
+		})
+
+			//Chap 3 Natural Mummies
 		.when('/NaturalMummies' , {
 
 			templateUrl: 'Views/NaturalMummies.html' ,
-			controller : 'chap2Ctrl'
+			controller : 'chap3Ctrl'
 		});
 
 });
@@ -32,27 +40,8 @@ mummyApp.config(function($routeProvider , $locationProvider) {
 
 //Scope injection - Routes DEFINED in Controllers Folder
 
-mummyApp.controller('mainCtrl' , function($scope) {
-
-	//messege to show which view your on
-	$scope.title = "Home";
-
-});
-
-mummyApp.controller('chap1Ctrl' , function($scope) {
-
-	//messege to show which view your on
-	$scope.title= "Whoa Mummy!";                 
-});
-
-mummyApp.controller('chap2Ctrl' , function($scope) {
-
-	//messege to show which view your on
-	$scope.title = "This is Chap 2!";
-});
 
 //HTML5 History API - Change route of the URL w/o refreshing the page
-$locationProvider.html5Mode(true);
 
 
 
